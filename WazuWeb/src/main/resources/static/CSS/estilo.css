@@ -1,0 +1,182 @@
+@charset "ISO-8859-1";
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("imagenes/wallgame.png") no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+  }
+  
+  .login-box {
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 30px;
+    
+  }
+  
+  .login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 50px);
+  }
+  
+  .login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    
+  }
+  
+  .text-box {
+    width: 300px;
+    height: 250px;
+    background: #272C2B;
+    color: #fff;
+    top: 700px;
+    left: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px; 
+  }
+  
+  .text-box .cartoon {
+    width: 145px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: calc(0% - 50px);
+  }
+  
+  .text-box2 {
+    width: 300px;
+    height: 250px;
+    background: #272C2B;
+    color: #fff00;
+    top: 700px;
+    left: 1150px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px; 
+     }
+
+  .text-box2 .cartoon2 {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    top: 106px;
+    left: calc(200px);
+  }
+
+  .text-box3 {
+    width: 500px;
+    height: 250px;
+    background: #272C2B;
+    color: #fff00;
+    top: 700px;
+    left: 675px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px; 
+     }
+     
+  .text-box3 .cartoon3 {
+    width: 500px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -55px;
+    left: calc(10% - 50px);
+  }
+  
+  .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .login-box input[type="text"], .login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    
+    
+  }
+  
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #c4500d;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    
+    
+  }
+  
+  .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #c4500d;
+    color: #000;
+    
+  }
+  
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    
+  }
+  
+  .login-box a:hover {
+    color: #fff;
+
+  }
+
+  .fb{
+    background: #3b5999;
+    /*border-radius: 20px;*/
+    color: #fff;
+    cursor: pointer;
+    border-style: none;
+  }
