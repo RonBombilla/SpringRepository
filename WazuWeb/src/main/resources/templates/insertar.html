@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http:://thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <p th:text="'Hello, '+${name}"/>
+   
+   <table>
+      <th:block th:each="usr :${usuarios}">
+         <tr>
+            <td th:text="${usr.idUsuario}"></td>
+            <td th:text="${usr.nombre}"></td>
+         </tr>
+      </th:block>
+   </table>
+</body>
+</html>

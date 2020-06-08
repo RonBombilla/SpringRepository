@@ -16,20 +16,29 @@ public class WazuWebController {
 	@Autowired
 	private IUsuario user;
 	
-	@GetMapping("/inicio")
-	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+	@GetMapping("/insertar")
+	public String insertar(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		
 		Usuario u = new Usuario();
-		u.setIdUsuario(1);
-		u.setNombre("Aaron");
-		u.setCorreo("aaron.ubij@gmail.com");
+		u.setIdUsuario(3);
+		u.setNombre("Jose");
+		u.setCorreo("Jose@gmail.com");
 		u.setContraseña("12345678");
 		user.save(u);
 		
-		model.addAttribute("nombre", name);
-		return "inicio";
+		model.addAttribute("name", name);
+		return "insertar";
 		
 	}
+	
+	@GetMapping("/listar")
+	public String insertar(Model model) {
+		//LOGICA
+		model.addAttribute("usuarios", user.findAll());
+		return "insertar";
+		
+	}
+	
 	@RequestMapping("/Login")
     public String getLogin() {
         return "Login";
@@ -38,6 +47,11 @@ public class WazuWebController {
     @RequestMapping("/registro")
     public String getregistro() {
         return "registro";
+    }
+    
+    @RequestMapping("/inicio")
+    public String getinicio() {
+        return "inicio";
     }
 
 }
