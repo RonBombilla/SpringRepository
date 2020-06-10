@@ -49,7 +49,7 @@ public class WazuWebController {
         return "registro";
     }
     
-    @RequestMapping("/inicio")
+    @RequestMapping("inicio")
     public String getinicio() {
         return "inicio";
     }
