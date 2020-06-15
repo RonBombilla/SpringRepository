@@ -39,9 +39,14 @@ public class WazuWebController {
 		
 	}
 	
-	@RequestMapping("/Login")
-    public String getLogin() {
-        return "Login";
+	@RequestMapping("inicio")
+    public String getinicio() {
+        return "inicio";
+    }
+	
+	@RequestMapping("/login")
+    public String getlogin() {
+        return "login";
     }
     
     @RequestMapping("/registro")
@@ -49,9 +54,14 @@ public class WazuWebController {
         return "registro";
     }
     
-    @RequestMapping("inicio")
-    public String getinicio() {
-        return "inicio";
+    @RequestMapping("/")
+    public String gethome() {
+        return "home";
+    }
+    
+    @RequestMapping("/jugar")
+    public String getjugar() {
+        return "jugar";
     }
 
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>WAZU LOGIN</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/estilo.css">
+  </head>
+ <body>
+ <audio autoplay>
+      <source src="imagenes/jingle2.mp3" type="audio/mp3">
+    </audio>
+    <div class ="alert alert-danger" th:if="$(param.error)">
+         Error en usuario o password 
+    </div>
+    
+    <div class ="alert alert-info" th:if="$(param.logout)">
+         Sesión cerrada 
+    </div>
+    
+    <form th:action="@(login)" method="post">
+    
+       <div class="login-box">
+         <img src="imagenes/logo.png" class="avatar" alt="Avatar Image">
+           <!-- USERNAME INPUT -->
+           <label for="username">Usuario</label>
+           <input type="text" placeholder="">
+           <!-- PASSWORD INPUT -->
+           <label for="password">Contraseña</label>
+           <input type="password" placeholder="">
+           <input type="submit" value="Iniciar Sesión">
+           <button class="fb"><i class="fab fa-facebook-f"></i> Acceder con Facebook</button><br>
+           <a href="#">Olvidaste tu contraseña?</a><br>
+           <a href="registro">No tienes una cuenta Wazu?</a>
+         </div>
+      </form>
+  </body>
+</html>
