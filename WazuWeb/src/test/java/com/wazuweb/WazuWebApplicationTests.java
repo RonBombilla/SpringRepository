@@ -24,9 +24,9 @@ class WazuWebApplicationTests {
 	@Test
 	public void crearUsuarioTest() {
 		UsuarioSecurity us = new UsuarioSecurity();
-		us.setId(1);
-		us.setNombre("Aaron");
-		us.setClave(encoder.encode("kkhuate-6651"));
+		us.setId(4);
+		us.setNombre("ronbombilla");
+		us.setClave(encoder.encode("kkhuate6651"));
 		UsuarioSecurity retorno = log.save(us);
 		
 		assertTrue(retorno.getClave().equalsIgnoreCase(us.getClave()));

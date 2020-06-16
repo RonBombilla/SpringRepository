@@ -23,7 +23,7 @@ public class UserService implements UserDetailsService{
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UsuarioSecurity us = log.findById(username);
+		UsuarioSecurity us = log.findByNombre(username);
 		
 		List<GrantedAuthority> roles = new ArrayList<>();
 		roles.add(new SimpleGrantedAuthority ("USER"));
