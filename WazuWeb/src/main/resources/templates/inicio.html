@@ -28,6 +28,7 @@
       <li><a href="login">Iniciar Sesión</a></li>
       <li><a href="registro">Registarse</a></li>
       <li><a href="jugar">Jugar!!</a></li>
+      <li><a href="javascript:;" onclick="document.getElementById('logout').submit();">Cerrar Sesión</a></li>
     </ul>
   </div>
 </nav>
@@ -107,7 +108,7 @@
     
     <div class="media-body">
       <h4 class="media-heading">New Patch 2.1.0 <small><i>Posted on July 23, 20</i></small></h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Nuevo modelo de preguntas, por que siempre en el Area de la salud es recomendable aprender algo.</p>
       
       <!-- Nested media object -->
       <div class="media">
@@ -187,6 +188,8 @@
             </div> 
           </div>
         </div>
+        <form th:action="@{/logout}" method="post" id="logout"></form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       </div>
 </body>
 </html>
