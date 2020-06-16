@@ -26,7 +26,7 @@ public class UserService implements UserDetailsService{
 		UsuarioSecurity us = log.findByNombre(username);
 		
 		List<GrantedAuthority> roles = new ArrayList<>();
-		roles.add(new SimpleGrantedAuthority ("USER"));
+		roles.add(new SimpleGrantedAuthority ("ADMIN"));
 		
 		UserDetails userDet = new User (us.getNombre(), us.getClave(), roles);
 		

@@ -30,7 +30,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure (AuthenticationManagerBuilder auth)
 	   throws Exception {
-	      auth.userDetailsService(userDetailsService).passwordEncoder(bcrypt);
+	       /*auth
+	          .inMemoryAuthentication()
+	          .withUser("user")
+	             .password("password")
+	             .roles("USER")
+	             .and()
+	          .withUser("admin")
+	             .password("admin")
+	             .roles("USER","ADMIN");*/
+	          
+		auth.userDetailsService(userDetailsService).passwordEncoder(bcrypt);
+		
 	      
 		
 	   }
@@ -39,11 +50,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure (HttpSecurity http) throws Exception {
 		http
 		   .authorizeRequests()
-		   	   .antMatchers("/","/home","/registro","/inicio").permitAll()
-		   	   .antMatchers("/resources/**").permitAll()
-		   	   .antMatchers("/*.js").permitAll()
-               .antMatchers("/CSS/**").authenticated()
-		       .anyRequest().authenticated()
+		   	   .antMatchers("/","/home","/registro").permitAll()
+		   	   .antMatchers("/js").permitAll()
+		   	   .antMatchers("/CSS").permitAll()
+               .antMatchers("/jugar").authenticated()
 		       .and()
 		   .formLogin()
 		       .loginPage("/login")
