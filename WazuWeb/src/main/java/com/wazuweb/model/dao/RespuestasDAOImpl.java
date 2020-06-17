@@ -17,7 +17,7 @@ public class RespuestasDAOImpl implements RespuestasDAO{
 	
 	
 	
-	private String list = "SELECT * FROM SYS.RESPUESTAS WHERE CODP=?";
+	private String list = "SELECT * FROM RESPUESTAS WHERE CODP=?";
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

@@ -1,6 +1,6 @@
 var currentQuestion = 0;
 var score = 0;
-var totQuestions = question.lenght;
+var totQuestions = 10;
 
 var container = document.getElementById('questionContainer');
 var questionEl = document.getElementById('question');
@@ -13,35 +13,44 @@ var resultCont = document.getElementById('result');
 
 function loadQuestion (){
 	var q = PregController('get');
-	questionEl.textContent = (PregController + 1 ) + '. ' + q.get;
+	/*questionEl.textContent = (PregController + 1 ) + '. ' + q.get;
 	opt1.textContent = q.option1;
 	opt2.textContent = q.option2;
 	opt3.textContent = q.option3;
 	opt4.textContent = q.option4;
+	*/
 }
 
 function loadNextQuestion () {
 	var selectedOption = document.querySelector('input[type=radio]:checked');
 	if(!selectedOption){
+
 		alert('Por favor selecciona una respuesta!');
 		return;
 	}
-	var answer = selectedOption.value;
-	if(PregController('get')[currentQuestion].answer == answer){
+	
+	var answer = $("#opt"+ selectedOption.value).val();
+	if(answer=="true"){
 		score +=10;
+		console.log(score);
 	}
 	selectedOption.checked = false;
 	currentQuestion++;
 	if(currentQuestion == totQuestions - 1){
-		nextButton.textContent = 'Finish';
+		nextButton.textContent = 'Terminar';
 	}
 	if(currentQuestion == totQuestions){
 		container.style.display = 'none';
 		resultCont.style.display = '';
-		resultCont.textContent = "Tu score: " + score;
+		if (score <= 50) {
+			resultCont.textContent = "Tu puntuación pk: " + score;
+
+		}
+		resultCont.textContent = "Tu puntuación: " + score;
 	}
-	loadNextQuestion(currentQuestion);
+	if(score <= 50)
+
+	loadQuestion(currentQuestion);
 
 }
 loadQuestion(currentQuestion);
-

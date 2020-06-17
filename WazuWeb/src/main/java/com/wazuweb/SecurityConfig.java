@@ -26,11 +26,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder ();
 		return bCryptPasswordEncoder;
 		}
-	
+	/*
 	@Override
 	protected void configure (AuthenticationManagerBuilder auth)
 	   throws Exception {
-	       /*auth
+	       auth
 	          .inMemoryAuthentication()
 	          .withUser("user")
 	             .password("password")
@@ -38,13 +38,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	             .and()
 	          .withUser("admin")
 	             .password("admin")
-	             .roles("USER","ADMIN");*/
+	             .roles("USER","ADMIN");
 	          
 		auth.userDetailsService(userDetailsService).passwordEncoder(bcrypt);
 		
 	      
 		
-	   }
+	   }*/
 	
 	@Override
 	protected void configure (HttpSecurity http) throws Exception {
@@ -53,7 +53,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		   	   .antMatchers("/","/home","/registro").permitAll()
 		   	   .antMatchers("/js").permitAll()
 		   	   .antMatchers("/CSS").permitAll()
-               .antMatchers("/jugar").authenticated()
+		   	   .antMatchers("/jugar").authenticated()
+               //.anyRequest().authenticated()
 		       .and()
 		   .formLogin()
 		       .loginPage("/login")
@@ -61,6 +62,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		       .and()
 		   .logout()
 		       .permitAll();
+		       
+		/*
+		http
+			.authorizeRequests()
+		   .anyRequest()
+		   .authenticated()
+		   .and()
+		   .httpBasic();*/
 	}
 }
 

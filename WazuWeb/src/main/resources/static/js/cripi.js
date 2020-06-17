@@ -3,12 +3,14 @@
 function PregController(opcion) {
 	$("#msg").hide();
 	$("#msg").removeClass("alert-success").addClass("alert-danger");
+	var token = $("meta[name='_csrf']").attr("content");
 
 	switch (opcion) {
 
 	case "get":
 		$.ajax({
 			type : "post",
+			headers: {"X-CSRF-TOKEN": token},
 			url : "/jugar/get",
 			data : "CODP=" + $("#pregunta_id").val(),
 			success : function(res) {
@@ -18,12 +20,11 @@ function PregController(opcion) {
 				} else {
 					$("#question").html(res.preg);
 					ResController("list", res.codp);
-					console.log(res.preg);
 				}
 			},
 			error : function() {
 				$("#msg").show();
-				;("#msg").html("Error en busqueda.");
+				$("#msg").html("Error en busqueda.");
 			}
 		});
 		break;
@@ -35,10 +36,12 @@ function PregController(opcion) {
 function ResController(opcion, codp) {
 	$("#msg").hide();
 	$("#msg").removeClass("alert-success").addClass("alert-danger");
+	var token = $("meta[name='_csrf']").attr("content");
 	switch (opcion) {
 	case "list":
 		$.ajax({
 			type : "post",
+			headers: {"X-CSRF-TOKEN": token},
 			url : "/jugar/list",
 			data : "CODP=" + codp,
 			success : function(res) {
@@ -50,7 +53,9 @@ function ResController(opcion, codp) {
 				} else {
 					$.each(res, function(k, v) {
 						$('#opt' + (k+1)).html(v.res);
+						$('#opt' + (k+1)).val(v.resco);
 						result += "<button>" + (v.res) + "</button>";
+					
 					});
 					$("#respuestas").html(result);
 				}

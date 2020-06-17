@@ -1,6 +1,6 @@
 package com.wazuweb.service;
 
-import java.util.List;
+
 
 import com.wazuweb.model.dto.PreguntasDTO;
 

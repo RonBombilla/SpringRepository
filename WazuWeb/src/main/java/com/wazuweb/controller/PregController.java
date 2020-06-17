@@ -1,8 +1,6 @@
 package com.wazuweb.controller;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.stream.Collectors;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,6 +26,7 @@ public class PregController {
 		@RequestMapping(value="/get")
 		public @ResponseBody PreguntasDTO ajaxGet(HttpServletRequest req, HttpServletResponse res) {
 			PreguntasDTO preg = pregsService.get(req.getParameter("CODP"));
+			System.out.println(preg);
 			return preg;
 		}
 }

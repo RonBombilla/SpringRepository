@@ -16,9 +16,9 @@ import com.wazuweb.model.dto.PreguntasDTO;
 @Transactional
 public class PreguntasDAOImpl implements PreguntasDAO{
 
-	public String list = "SELECT * FROM SYS.PREGUNTAS";
-	public String select = "SELECT * FROM SYS.PREGUNTAS WHERE CODP=?";
-	public String random = "SELECT * FROM (SELECT * FROM SYS.PREGUNTAS ORDER BY dbms_random.value) WHERE rownum=?";
+	public String list = "SELECT * FROM PREGUNTAS";
+	public String select = "SELECT * FROM PREGUNTAS WHERE CODP=?";
+	public String random = "select * from (select * from preguntas ORDER BY DBMS_RANDOM.RANDOM) where rownum <=?";
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
