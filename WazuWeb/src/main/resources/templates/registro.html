@@ -1,15 +1,20 @@
 <html>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+<link href="/CSS/bootstrap.css" rel="stylesheet" th:href="@{/CSS/bootstrap.css}">
 <link rel="stylesheet" href="CSS/estilo2.css">
+<link rel="stylesheet" href="CSS/estilos.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Registro Wazu</title>
 <body>
 <audio autoplay>
       <source src="imagenes/jingle2.mp3" type="audio/mp3">
     </audio>
+    <div th:replace="fragments/header :: header"></div>
     <div class="container">
       <div class="login-container">
         <div class="register">
-          <img src="imagenes/logo.png" class="avatar" alt="Avatar Image">
-          <h2 class="*">Registro</h2>
+          <img src="imagenes/brainlogo.png" class="avatar" alt="Avatar Image">
           <form action="">
             <input type="text" placeholder="Nombre" class="nombre">
             <input type="text" placeholder="Correo" class="correo">
@@ -20,5 +25,7 @@
         </div>
       </div>
     </div>
+    <div th:replace="fragments/footer :: footer"></div>
+    
  </body>
  </html>

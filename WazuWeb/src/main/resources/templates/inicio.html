@@ -4,86 +4,79 @@
     <title>Bienvenidos a Wazu</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8">
-    <meta name="viewport" content="100%, initial-scale=1">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="CSS/sheet.css">
-    <link rel="stylesheet" href="CSS/estilo.css">
 </head>
     
     
-<body style="background-image:url('imagenes/wallgame.png'); background-attachment: fixed;">
-<p th:text="'Hello, ' + ${nombre} + '!'" />
+<body>
     <audio autoplay>
       <source src="imagenes/jingle2.mp3" type="audio/mp3">
     </audio>
     
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="inicio">Wazu</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="login">Iniciar Sesión</a></li>
-      <li><a href="registro">Registarse</a></li>
-      <li><a href="jugar">Jugar!!</a></li>
-      <li><a href="javascript:;" onclick="document.getElementById('logout').submit();">Cerrar Sesión</a></li>
-    </ul>
-  </div>
-</nav>
+       <div th:replace="fragments/header :: header"></div>
+               
+            <div class="slider" > 
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+              
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="imagenes/NewWazu.png" alt="New Wazu" style="width:1142px; height:400px;">
+                    </div>
+              
+                    <div class="item">
+                      <img src="imagenes/0001.jpg" alt="Logo" style="width:1142px; height:400px;">
+                    </div>
+                  
+                    <div class="item">
+                      <img src="imagenes/gatito.jpg" alt="Gatito" style="width:1142px; height:400px;">
+                    </div>
+                  </div>
+              
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
 
-<div align="center" class="container" style="margin-top:100px">
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-      
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="imagenes/NewWazu.png" style="width:1142px; height:400px;">
+            
+            <div class="contenedor-box">
+                <aside>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illo magnam odio. Eum, cum modi. Rem officiis possimus ipsum earum vero nam magnam saepe quis, sed optio? Saepe, minima harum.
+                    </p>
+                </aside>
+                <aside-2>
+                  <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illo magnam odio. Eum, cum modi. Rem officiis possimus ipsum earum vero nam magnam saepe quis, sed optio? Saepe, minima harum.
+                  </p>
+              </aside-2>
+              <aside-3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illo magnam odio. Eum, cum modi. Rem officiis possimus ipsum earum vero nam magnam saepe quis, sed optio? Saepe, minima harum.
+                </p>
+            </aside-3>
             </div>
-      
-            <div class="item">
-              <img src="imagenes/0001.jpg" style="width:1142px; height:400px;">
-            </div>
-          
-            <div class="item">
-              <img src="imagenes/gatito.jpg" style="width:1142px; height:400px;">
-            </div>
-</div>
-    
-          <!-- Left and right controls -->
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-      
-<div class="text-box">
-<img src="imagenes/guy2.png" class="cartoon" alt="cartoon Image">
-</div>
-
-<div class="text-box2">
-<img src="imagenes/guy.png" class="cartoon2" alt="cartoon Image">
-</div>
-
-<div class="text-box3">
-<img src="imagenes/cerebro-caricatura-png-1.png" class="cartoon3" alt="cartoon Image">
-</div>
-
-      <!-- inicio del scroll info 'noticias' -->
-      <table style="margin-left:100px; margin-top:400px" cellspacing="0" cellpadding="0" border ="1" width="325">
+   <!-- inicio del scroll info 'noticias' -->
+       
+   <div class="scroll-box">      
+      <table  style="margin:auto ; margin-top: 3%; margin-bottom: 3%;"	>
         <tr>
           <td>
              <table cellspacing="0" cellpadding="0" border ="1" width="500" >
@@ -100,7 +93,7 @@
       <table  cellspacing="0" cellpadding="0" border="0" width="300" >
  <div class="media">
     <div class="media-left">
-      <img src="imagenes/img_avatar1.png" class="media-object" style="width:45px">
+      <img src="imagenes/brainlogo.png" class="media-object" style="width:45px">
     </div>
 </div>
     
@@ -108,12 +101,12 @@
     
     <div class="media-body">
       <h4 class="media-heading">New Patch 2.1.0 <small><i>Posted on July 23, 20</i></small></h4>
-      <p>Nuevo modelo de preguntas, por que siempre en el Area de la salud es recomendable aprender algo.</p>
+      <p>Nuevo modelo de preguntas, aportale a tu cerebro los conocimientos necesarios para una buena salud y en casos de emergencia</p>
       
       <!-- Nested media object -->
       <div class="media">
         <div class="media-left">
-          <img src="imagenes/img_avatar2.png" class="media-object" style="width:45px">
+          <img src="imagenes/brainlogo.png" class="media-object" style="width:45px">
         </div>
         <div class="media-body">
           <h4 class="media-heading">John Doe <small><i>Posted on February 20, 2016</i></small></h4>
@@ -122,7 +115,7 @@
           <!-- Nested media object -->
           <div class="media">
             <div class="media-left">
-              <img src="imagenes/img_avatar3.png" class="media-object" style="width:45px">
+              <img src="imagenes/brainlogo.png" class="media-object" style="width:45px">
             </div>
             <div class="media-left">
               <h4 class="media-heading">Wazu Developers <small><i>Posted on August 21, 2020</i></small></h4>
@@ -135,7 +128,7 @@
         <!-- Nested media object -->
         <div class="media">
           <div class="media-left">
-            <img src="imagenes/img_avatar4.png" class="media-object" style="width:45px">
+            <img src="imagenes/brainlogo.png" class="media-object" style="width:45px">
           </div>
           <div class="media-body">
             <h4 class="media-heading">Jane Doe <small><i>Posted on February 20, 2016</i></small></h4>
@@ -149,7 +142,7 @@
     <!-- Nested media object -->    
     <div class="media">
       <div class="media-left">
-        <img src="imagenes/img_avatar5.png" class="media-object" style="width:45px">
+        <img src="imagenes/brainlogo.png" class="media-object" style="width:45px">
       </div>
       <div class="media-body">
         <h4 class="media-heading">Jane Doe <small><i>Posted on February 19, 2016</i></small></h4>
@@ -162,34 +155,13 @@
          </td>
        </tr>
      </table>
-      <!-- fin del scroll -->
+            </div>
+       <!-- inicio del scroll info 'noticias' -->
       
-   <div class="container">
-     <h2>Ayudanos a crecer</h2>
-      <!-- Trigger the modal with a button -->
-       <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Presiona aquí.</button>
-      
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Ayudanos a crecer!!!</h4>
-              </div>
-              <div class="modal-body">
-                <p>Puedes ayudarnos compartiendo nuestra página en redes sociales o donando en nuestra cuenta: 17832824 del Banco Estado.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div> 
-          </div>
-        </div>
+       <!--inicio de footer-->
+            <div th:replace="fragments/footer :: footer"></div>
+            <!--fin del footer-->
         <form th:action="@{/logout}" method="post" id="logout"></form>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      </div>
 </body>
 </html>
