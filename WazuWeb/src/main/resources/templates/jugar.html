@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/play.css">
+        <link rel="stylesheet" href="CSS/estilos.css">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse" th:fragment="header">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">Wazu</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="javascript:;" onclick="document.getElementById('logout').submit();">Cerrar Sesion</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
+        <div class="alert alert-info" th:if="${param.logout}">Sesión
+		cerrada</div>
+	    <div class="alert alert-danger" th:if="${param.error}">Error en
+		usuario o password</div>
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta th:name="${_csrf.parameterName}" th:content="${_csrf.token}"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link href="/css/quiz.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-	<title>Wazu</title>
-</head>
-
-<body>
-<div id="questionContainer" class="container">
-	<div class="title">Quiz de Preguntas</div>
-	<div id="question" class="question"></div>
-	<label class="option" ><input type="radio" name="option" value="1" /> <span id="opt1" name="answer"></span></label>
-	<label class="option" ><input type="radio" name="option" value="2" /> <span id="opt2" name="answer"></span></label>
-	<label class="option" ><input type="radio" name="option" value="3" /> <span id="opt3" name="answer"></span></label>
-	<label class="option" ><input type="radio" name="option" value="4" /> <span id="opt4" name="answer"></span></label>
-	<button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Siguiente Pregunta</button>
-	
-</div>
-<div id="result" class="container result" style="display: none;">
-</div>
-
-
-				<script src="/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-				<script src="/js/cripi.js" th:href="@{/js/cripi.js}"></script>
-				<script src="/js/quiz-script.js" th:href="@{/js/quiz-script.js}"></script>
-				<!-- <script src="/js/question.js" th:href="@{/js/question.js}"></script> -->
-
-</body>
-
+        <div class="contenedr">
+            <p class="p-box">Pregunta unpj kjksdk jsdvkjdsn lkdfjlks dfkjsdhf kjsdkjf sdkjfkjfkd jhajksdhfj jdhfkajsdhflakjh jfdhlkjashdfj</p>
+            <div>
+                <div class="res-box-1">
+                    <p>s. jshdkja hgjhgkgk oiu poiupo iuiuoijh ggffg hoiujoijhlhg gfjhgf</p>
+                </div>
+                <div class="res-box-2">
+                    <p>s. jshdkja hgjhgkgk oiu poiupo iuiuoijh ggffg hoiujoijhlhg gfjhgf</p>
+                </div>
+                <div class="res-box-3">
+                    <p>s. jshdkja hgjhgkgk oiu poiupo iuiuoijh ggffg hoiujoijhlhg gfjhgf</p>
+                </div>
+                <div class="res-box-4">
+                    <p>s. jshdkja hgjhgkgk oiu poiupo iuiuoijh ggffg hoiujoijhlhg gfjhgf</p>
+                </div>
+                <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Siguiente Pregunta</button>
+            </div>
+        </div>
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
 </html>

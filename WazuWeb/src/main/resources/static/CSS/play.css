@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("images/wallgame.png") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.contenedr{
+    width: 60%;
+    max-width: 1080px;
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+    background-color: black;
+    overflow:hidden;
+    border-radius: 50px;
+    
+}
+
+.res-box-1 {
+    width: 45%;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background: #222222;
+    margin-top: 2%;
+    margin-left: 3.2%;
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.res-box-2 {
+    width: 45%;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background: #222222;
+    margin-top: 2%;
+    margin-right: 3.2%;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.res-box-3 {
+    width: 45%;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background: #222222;
+    margin-top: 2%;
+    margin-left: 3.2%;
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.res-box-4 {
+    width: 45%;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    background: #222222;
+    margin-top: 2%;
+    margin-right: 3.2%;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+     
+}
+
+.p-box{
+    width: 70%;
+    padding: 3.5%;
+    margin: auto;
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
+    border-radius: 25px;
+    background-color: #c4500d;
+    color: #fff;
+    font-size: 20px;   
+}
+
+.avatar-1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 126px;
+    left: calc(50% - -300px);
+}
+
+.avatar-2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 126px;
+    left: calc(50% - 400px);
+}
+
+.avatar-3{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 344px;
+    left: calc(50% - -300px);
+}
+
+.avatar-4{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 344px;
+    left: calc(50% - 400px);
+}
+
+.res-box-1 p{
+    padding-top: 55px;
+}
+
+.res-box-2 p{
+    padding-top: 55px;
+}
+
+.res-box-3 p{
+    padding-top: 55px;
+}
+
+.res-box-4 p{
+    padding-top:55px;
+}
+
+.buttn {
+    
+    width: auto;
+    padding: auto;
+    background-color: #c4500d;
+    border-radius: 10px;
+    margin-left: 42%;
+    margin-top: 0.8%;
+    margin-bottom: auto;
+}
+
+
+@media screen and (max-width: 800px){
+    .contenedr{
+        width: 80%;
+        height: auto;
+        border-radius: 25px;
+        margin: 10%;
+    }
+
+    .p-box{
+        width: 90%;
+        margin: auto;
+        margin-top: 2.5%;
+    }
+    .res-box-1{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .res-box-2{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .res-box-3{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .res-box-4{
+        width: 90%;
+        margin: 5%;
+    }
+} 
+
+@media screen and (max-width: 800px){
+    .buttn {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #c4500d;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .buttn {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #c4500d;
+        margin: auto;
+        margin-top: 2.5%;
+        
+    }
+
+    .contenedr{
+        width: auto;
+        height: auto;
+        border-radius: 25px;
+        margin: 10%;
+    }
+
+    .p-box{
+        width: 90%;
+        margin: auto;
+        margin-top: 2.5%;
+    }
+    .res-box-1{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .res-box-2{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .res-box-3{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .res-box-4{
+        width: 90%;
+        margin: 5%;
+    }
+}

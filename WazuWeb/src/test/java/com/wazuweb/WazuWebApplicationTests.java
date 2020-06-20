@@ -24,11 +24,11 @@ class WazuWebApplicationTests {
 	@Test
 	public void crearUsuarioTest() {
 		UsuarioSecurity us = new UsuarioSecurity();
-		us.setId(4);
-		us.setNombre("ronbombilla");
-		us.setClave(encoder.encode("kkhuate6651"));
+		us.setId(5);
+		us.setNombre("Profe");
+		us.setClave(encoder.encode("12345"));
 		UsuarioSecurity retorno = log.save(us);
-		
+			
 		assertTrue(retorno.getClave().equalsIgnoreCase(us.getClave()));
 	}
 
