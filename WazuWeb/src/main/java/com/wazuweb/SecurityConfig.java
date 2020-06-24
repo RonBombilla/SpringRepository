@@ -9,14 +9,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.wazuweb.service.UserService;
+import com.wazuweb.service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
-	private UserService userDetailsService;
+	private UserDetailsServiceImpl userDetailsService;
 	
 	@Autowired	
 	private BCryptPasswordEncoder bcrypt;

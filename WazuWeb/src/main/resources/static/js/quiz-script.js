@@ -2,7 +2,7 @@ var currentQuestion = 0;
 var score = 0;
 var totQuestions = 10;
 
-var container = document.getElementById('questionContainer');
+var container = document.getElementById('contenedr');
 var questionEl = document.getElementById('question');
 var opt1 = document.getElementById('opt1')
 var opt2 = document.getElementById('opt2')
@@ -13,12 +13,6 @@ var resultCont = document.getElementById('result');
 
 function loadQuestion (){
 	var q = PregController('get');
-	/*questionEl.textContent = (PregController + 1 ) + '. ' + q.get;
-	opt1.textContent = q.option1;
-	opt2.textContent = q.option2;
-	opt3.textContent = q.option3;
-	opt4.textContent = q.option4;
-	*/
 }
 
 function loadNextQuestion () {
@@ -28,7 +22,6 @@ function loadNextQuestion () {
 		alert('Por favor selecciona una respuesta!');
 		return;
 	}
-	
 	var answer = $("#opt"+ selectedOption.value).val();
 	if(answer=="true"){
 		score +=10;
@@ -48,8 +41,6 @@ function loadNextQuestion () {
 		}
 		resultCont.textContent = "Tu puntuación: " + score;
 	}
-	if(score <= 50)
-
 	loadQuestion(currentQuestion);
 
 }

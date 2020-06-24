@@ -1,17 +1,25 @@
 package com.wazuweb.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+//@Table(name = "USUARIO_SECURITY")
 @Entity
 public class UsuarioSecurity {
 	 
+	 //@GeneratedValue(strategy = GenerationType.IDENTITY)
 	 @Id
 	 private int id;
-	 private String nombre;
-	 private String clave;
-	
 	 
+	 private String nombre;
+	 
+	 private String clave;
+	 /*
+	 @Transient
+	 private String claveConfirm;
+	 
+	 @ManyToMany
+	 private String roles;
+	 */
 	public int getId() {
 		return id;
 	}
@@ -30,5 +38,17 @@ public class UsuarioSecurity {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
-
+	/*
+	public String getClaveConfirm() {
+		return claveConfirm;
+	}
+	public void setClaveConfirm(String claveConfirm) {
+		this.claveConfirm = claveConfirm;
+	}
+	public String getRoles() {
+		return roles;
+	}
+	public void setRoles(String roles) {
+		this.roles = roles;
+	}*/
 }
